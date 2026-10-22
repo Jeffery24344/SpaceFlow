@@ -1,0 +1,34 @@
+name: Build SpaceFlow
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build -c Release --no-restore
+
+      - name: Publish (self-contained, single-folder)
+        run: |
+          dotnet publish SpaceFlow.UI/SpaceFlow.UI.csproj -c Release -r win-x64 --self-contained true -o ./publish -p:PublishSingleFile=false -p:IncludeNativeLibrariesForSelfExtract=true
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SpaceFlow-Windows-x64
+          path: publish/
+          retention-days: 30
