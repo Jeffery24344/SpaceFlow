@@ -1,7 +1,7 @@
 <Window x:Class="SpaceFlow.UI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="SpaceFlow — More Room When You Need It"
+        Title="SpaceFlow - More Room When You Need It"
         Height="780" Width="960"
         MinHeight="640" MinWidth="800"
         Background="{StaticResource BgPrimary}"
@@ -18,7 +18,7 @@
     <Grid Grid.Row="0" Margin="0,0,0,18">
       <StackPanel Orientation="Horizontal">
         <TextBlock Text="SpaceFlow" FontSize="28" FontWeight="Bold" Foreground="{StaticResource TextPrimary}"/>
-        <TextBlock Text="  •  More Room When You Need It" FontSize="14" Foreground="{StaticResource TextSecondary}" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
+        <TextBlock Text="  -  More Room When You Need It" FontSize="14" Foreground="{StaticResource TextSecondary}" VerticalAlignment="Bottom" Margin="0,0,0,4"/>
       </StackPanel>
       <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
         <Ellipse x:Name="StatusDot" Width="12" Height="12" Fill="{StaticResource TextSecondary}" Margin="0,0,8,0"/>
@@ -29,7 +29,7 @@
       <Border Background="{StaticResource BgCard}" CornerRadius="12" Margin="0,0,8,8" Padding="18">
         <StackPanel>
           <TextBlock Text="PHYSICAL RAM" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,6"/>
-          <TextBlock x:Name="RamValueText" Text="— / —" FontSize="20" FontWeight="Bold" Foreground="{StaticResource TextPrimary}"/>
+          <TextBlock x:Name="RamValueText" Text="- / -" FontSize="20" FontWeight="Bold" Foreground="{StaticResource TextPrimary}"/>
           <ProgressBar x:Name="RamBar" Height="7" Margin="0,10,0,0" Minimum="0" Maximum="100" Background="#2D3340" Foreground="{StaticResource Accent}"/>
           <TextBlock x:Name="RamPercentText" Text="0%" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,5,0,0"/>
         </StackPanel>
@@ -38,8 +38,8 @@
         <StackPanel>
           <TextBlock Text="MEMORY PRESSURE" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,6"/>
           <TextBlock x:Name="PressureText" Text="NORMAL" FontSize="20" FontWeight="Bold" Foreground="{StaticResource Success}"/>
-          <TextBlock x:Name="CpuText" Text="CPU: —%" FontSize="12" Foreground="{StaticResource TextSecondary}" Margin="0,10,0,0"/>
-          <TextBlock x:Name="HealthText" Text="Health: —" FontSize="12" Foreground="{StaticResource TextSecondary}" Margin="0,4,0,0"/>
+          <TextBlock x:Name="CpuText" Text="CPU: -%" FontSize="12" Foreground="{StaticResource TextSecondary}" Margin="0,10,0,0"/>
+          <TextBlock x:Name="HealthText" Text="Health: -" FontSize="12" Foreground="{StaticResource TextSecondary}" Margin="0,4,0,0"/>
         </StackPanel>
       </Border>
       <Border Background="{StaticResource BgCard}" CornerRadius="12" Margin="0,8,8,0" Padding="18">
@@ -52,10 +52,10 @@
       </Border>
       <Border Background="{StaticResource BgCard}" CornerRadius="12" Margin="8,8,0,0" Padding="18">
         <StackPanel>
-          <TextBlock Text="MODE & STORAGE" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,6"/>
+          <TextBlock Text="MODE / STORAGE" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,6"/>
           <TextBlock x:Name="ModeText" Text="LOCAL" FontSize="20" FontWeight="Bold" Foreground="{StaticResource TextPrimary}"/>
-          <TextBlock x:Name="DiskText" Text="Drive: —  •  Free: —" FontSize="12" Foreground="{StaticResource TextSecondary}" Margin="0,10,0,0"/>
-          <TextBlock x:Name="StorageTypeText" Text="Type: —" FontSize="12" Foreground="{StaticResource TextSecondary}" Margin="0,4,0,0"/>
+          <TextBlock x:Name="DiskText" Text="Drive: -  |  Free: -" FontSize="12" Foreground="{StaticResource TextSecondary}" Margin="0,10,0,0"/>
+          <TextBlock x:Name="StorageTypeText" Text="Type: -" FontSize="12" Foreground="{StaticResource TextSecondary}" Margin="0,4,0,0"/>
         </StackPanel>
       </Border>
     </UniformGrid>
@@ -99,6 +99,6 @@
       </StackPanel>
     </Border>
     <TextBlock Grid.Row="4" Margin="0,12,0,0" FontSize="11" Foreground="{StaticResource TextSecondary}"
-               Text="SpaceFlow v0.2 Smart Local Flow  •  Safety first  •  Only SpaceFlow-created temporary data is cleaned"/>
+               Text="SpaceFlow v0.2 Smart Local Flow  -  Safety first  -  Only SpaceFlow-created temporary data is cleaned"/>
   </Grid>
 </Window>
